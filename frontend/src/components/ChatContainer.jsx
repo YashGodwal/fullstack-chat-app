@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import ChatHeader from "./ChatHeader";
 import MessageInput from "./MessageInput";
 import MessageSkeleton from "./skeletons/MessageSkeleton";
-import { useAuthStore } from "../store/useAuthStore"
+import { useAuthStore } from "../store/useAuthStore";
 import { formatMessageTime } from "../lib/utils";
  
 const ChatContainer = () => {
@@ -18,7 +18,7 @@ const ChatContainer = () => {
 
     subscribeToMessages();
 
-    return () => unsubscribeFromMessages();
+    return () => unsubscribeFromMessages(); 
   }, [selectedUser._id, getMessages, subscribeToMessages, unsubscribeFromMessages]);
 
 
@@ -80,7 +80,7 @@ const ChatContainer = () => {
       <MessageInput />
 
     </div>
-  )
-}
+  );
+};
 
-export default ChatContainer
+export default ChatContainer;
